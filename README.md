@@ -18,18 +18,10 @@ Before starting, review the following requirements.
 - Connect Operations Manager to Azure Monitor from [here](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/om-agents).
 - Add the Alert Management solution to your Log Analytics workspace.
 
-### Demo overview
-
-Our demo environment consists of 3 Windows VMs and Log Analytics workspace:
-
-- **advm** - AD controller.
-- **SCOM2016RTMs** - SCOM2016RTMs server.
-- **wli2017-sql** - VM with SQL 2017 instance added to the SCOM  Management Group.
-- **LAforVIACODE** - Log Analytics workspace that is already connected to the SCOM, and Alert Management Solution installed into this workspace
-
-![Demolab-test resource group](./media/demolab_test_rg.jpg)
 
 ## Install SCOM Alert Management solution
+
+### Install from the Portal
 
 1. Log in to the Azure portal.
 2. Open **All Services** and locate **Solutions**.
@@ -70,6 +62,15 @@ Our demo environment consists of 3 Windows VMs and Log Analytics workspace:
 
 - User can read Terms of Use and [Private Policy](https://www.viacode.com/viacode-privacy-statement)
 
+### Install from the Marketplace
+
+1. Open Azure Marketplace
+2. Select **Management Tools** and find **SCOM Alert Management** solution
+
+![Marketplace Management Tools](./media/marketplace_management_tools.jpg)
+
+3. Click **Create** to start the installation process.
+
 ## Verify monitoring solution deploy
 
 The solution is in a separate resource group and includes two logic apps.
@@ -81,7 +82,16 @@ The solution is in a separate resource group and includes two logic apps.
 
 ## Automatically create Azure Alert Rules for all SCOM alerts
 
-1. Take offline "testDB" Database on the client **wli2017-sql**
+Let's consider the case when an error has occurred on the client's side.
 
-![testDB offline](./media/testdb_offline.jpg)
+![Testdb offline](./media/testdb_offline.jpg)
 
+![SCOM alert](./media/SCOM2016RTMs_alert.jpg)
+
+1. In the portal, select **Monitor** and under the Monitor section - choose **Alerts**.
+
+![Monitor Alert](./media/monitor_alerts.jpg)
+
+2. You will land on the Alerts Summary page, which gives you an overview of all your alert instances across Azure. As you've installed SCOM Alert Management solution you should see automatically created Alert rule for this alert.
+
+3. Click on Alert rule
