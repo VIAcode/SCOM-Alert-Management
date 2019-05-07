@@ -18,6 +18,25 @@ Before starting, review the following requirements.
 - Connect Operations Manager to Azure Monitor from [here](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/om-agents).
 - Add the Alert Management solution to your Log Analytics workspace.
 
+Let's consider the following case when an error has occurred on the client's side.
+
+The error on the client side:
+
+![Testdb offline](./media/testdb_offline.jpg)
+
+The alert in SCOM:
+
+![SCOM alert](./media/SCOM2016RTMs_alert.jpg)
+
+1. In the portal, select **Monitor** and under the Monitor section - choose **Alerts**.
+
+![Monitor Alerts](./media/monitor_alerts.jpg)
+
+2. You will land on the Alerts Summary page, which gives you an overview of all your alert instances across Azure.
+
+
+
+As you can see, the alert raised in Azure does not have a correspondent alert rule, so you cannot manage this alerts - you cannot disable them, change severity, assign an action group.
 
 ## Install SCOM Alert Management solution
 
@@ -82,16 +101,8 @@ The solution is in a separate resource group and includes two logic apps.
 
 ## Automatically create Azure Alert Rules for all SCOM alerts
 
-Let's consider the case when an error has occurred on the client's side.
-
-![Testdb offline](./media/testdb_offline.jpg)
-
-![SCOM alert](./media/SCOM2016RTMs_alert.jpg)
-
 1. In the portal, select **Monitor** and under the Monitor section - choose **Alerts**.
 
 ![Monitor Alert](./media/monitor_alerts.jpg)
 
-2. You will land on the Alerts Summary page, which gives you an overview of all your alert instances across Azure. As you've installed SCOM Alert Management solution you should see automatically created Alert rule for this alert.
-
-3. Click on Alert rule
+2. 
