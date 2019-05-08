@@ -34,7 +34,7 @@ The alert in SCOM:
 
 2. You will land on the Alerts Summary page, which gives you an overview of all your alert instances across Azure.
 
-
+<!--jpg without rule -->
 
 As you can see, the alert raised in Azure does not have a correspondent alert rule, so you cannot manage this alerts - you cannot disable them, change severity, assign an action group.
 
@@ -105,4 +105,32 @@ The solution is in a separate resource group and includes two logic apps.
 
 ![Monitor Alert](./media/monitor_alerts.jpg)
 
-2. 
+2. You'll will see auto created alert rule.
+
+![Alert Rule](./media/alert_rule.jpg)
+
+3. Click on **Total alert rules** to show the Rules page.
+
+![total alert rules](./media/rule.jpg)
+
+4. Select the rule
+
+![SCOM Alert rule](./media/Rule_drillon.jpg)
+
+<!-- <Description?> -->
+
+## Manage alert rules
+
+### Enable or Disable the generation of Azure Alerts for corresponding SCOM Alerts.
+
+You can manage alerts by enabling and disabling them in the alert rule section.
+<!-- In the Rule page , you can select multiple alert rules and enable/disable them. This might be useful when certain target resources need to be put under maintenance-->
+
+ - If the alert is no longer required, click on **Disable** button. 
+
+![Disable rule](./media/disable_rule.jpg)
+
+- In that case you won't see it in the **Alert** page.
+
+<!-- -->
+
