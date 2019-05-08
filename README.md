@@ -115,7 +115,7 @@ The solution is in a separate resource group and includes two logic apps.
 
 4. Select the rule
 
-![SCOM Alert rule](./media/Rule_drillon.jpg)
+![SCOM Alert rule](./media/Rule_drillon.JPG)
 
 <!-- <Description?> -->
 
