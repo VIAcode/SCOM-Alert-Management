@@ -134,3 +134,11 @@ You can manage alerts by enabling and disabling them in the alert rule section.
 
 <!-- -->
 
+### Log query
+
+You can view and manage log queries by clicking on the **Condition** value.
+
+![Log query](./media/log_query.jpg)
+
+### ITSM
+
