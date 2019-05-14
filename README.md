@@ -94,8 +94,8 @@ As you can see, the alert raised in Azure does not have a correspondent alert ru
 
 The solution is in a separate resource group and includes two logic apps.
 
-- [x] **AlertCreator** creates a new alert rule.
-- [x] **CloseAlerts** closes the original Alert Management solution (unmanageable alerts).
+-  **AlertCreator** creates a new alert rule.
+-  **CloseAlerts** closes the original Alert Management solution (unmanageable alerts).
 
 ![Demo Solution RG](./media/demo_solution_rg.jpg)
 
@@ -105,7 +105,7 @@ The solution is in a separate resource group and includes two logic apps.
 
 ![Monitor Alert](./media/monitor_alerts.jpg)
 
-2. You'll will see auto created alert rule.
+2. You will see auto created alert rule.
 
 ![Alert Rule](./media/alert_rule.jpg)
 
@@ -121,16 +121,16 @@ The solution is in a separate resource group and includes two logic apps.
 
 ## Manage alert rules
 
-### Enable or Disable the generation of Azure Alerts for corresponding SCOM Alerts.
+### Enable or Disable the generation of Azure Alerts for corresponding SCOM Alerts
 
 You can manage alerts by enabling and disabling them in the alert rule section.
 <!-- In the Rule page , you can select multiple alert rules and enable/disable them. This might be useful when certain target resources need to be put under maintenance-->
 
- - If the alert is no longer required, click on **Disable** button. 
+ - If the alert is no longer required, click on **Disable** button.
 
 ![Disable rule](./media/disable_rule.jpg)
 
-- In that case you won't see it in the **Alert** page.
+- In that case you will see it in the **Alert** page. <!-- Error. need to investigate the gap -->
 
 <!-- -->
 
@@ -142,3 +142,19 @@ You can view and manage log queries by clicking on the **Condition** value.
 
 ### ITSM
 
+<!-- -->
+
+## Troubleshooting
+
+If one of your solution deployments failed during installation, perform next steps:
+
+1. Remove resource group with the solution and deploy it again
+
+Or you can make these steps
+
+1. Open Log Analytics resource group.
+2. Select **Access Control (IAM)**.
+3. Click **Add** and choose **Add role assignment**.
+4. Select **Monitoring Contributor** in "Role" textbox, select  **AlertCreator** and **CloseAlerts** for your subscription
+
+![Failed deployments](./media/troubleshooting.jpg)
