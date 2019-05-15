@@ -16,7 +16,7 @@ Before starting, review the following requirements.
 - Download and set up System Center Operation Manager from [here](https://docs.microsoft.com/en-us/system-center/scom/manage-operations-guide-overview?view=sc-om-1807).
 - Create a Log Analytics workspace in the Azure portal from [here](https://docs.microsoft.com/en-us/azure/azure-monitor/learn/quick-create-workspace).
 - Connect Operations Manager to Azure Monitor from [here](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/om-agents).
-- Add the Alert Management solution to your Log Analytics workspace. Instructions [here](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alert-management-solution).
+- Add the Alert Management solution to your Log Analytics workspace. Instruction is [here](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alert-management-solution).
 - Connect Azure to ITSM tools using IT Service Management Connector [here](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/itsmc-overview)
 
 Let's consider the following case when an error has occurred on the client's side.
