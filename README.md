@@ -34,9 +34,9 @@ The alert in SCOM:
 
 2. You will land on the Alerts Summary page, which gives you an overview of all your alert instances across Azure.
 
-<!--jpg without rule -->
+![Alert Management solution](./media/)
 
-As you can see, the alert raised in Azure does not have a correspondent alert rule, so you cannot manage this alerts - you cannot disable them, change severity, assign an action group.
+As you can see, the alert raised in Azure does not have a correspondent alert rule, so you cannot manage this alert - you cannot disable it, change severity, assign an action group.
 
 ## Install SCOM Alert Management solution
 
@@ -78,6 +78,8 @@ As you can see, the alert raised in Azure does not have a correspondent alert ru
 - You're prompted to provide information such as the resource group and location in addition to values for any parameters in the solution
 
 4. Buy
+
+![Buy](./media/buy.jpg)
 
 - User can read Terms of Use and [Private Policy](https://www.viacode.com/viacode-privacy-statement)
 
@@ -142,7 +144,7 @@ You can view and manage log queries by clicking on the **Condition** value.
 
 ### ITSM
 
-<!-- -->
+
 
 ## Troubleshooting
 
