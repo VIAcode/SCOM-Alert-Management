@@ -143,8 +143,6 @@ If one of your solution deployments failed during installation, check [Troublesh
 
 ![SCOM Alert](./media/scom_alert.jpg)
 
-<!-- <Description?> -->
-
 ## Manage alert rules
 
 ### Enable or Disable the generation of Azure Alerts for corresponding SCOM Alerts
@@ -187,6 +185,8 @@ Use the following procedure:
 8. Select **Work Item** type from the drop-down menu. Choose to use an existing template or fill the fields required by your ITSM product.
 9.  Click OK.
 
+* More information you can find on [docs.microsoft.com](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/itsmc-overview)
+  
 ## Troubleshooting
 
 If one of your solution deployments failed during installation, perform next steps:
