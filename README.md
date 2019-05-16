@@ -102,23 +102,25 @@ The solution is in a separate resource group and includes two logic apps.
 
 ![Demo Solution RG](./media/demo_solution_rg.jpg)
 
+If one of your solution deployments failed during installation, check [Troubleshooting](##Troubleshooting).
+
 ## Automatically create Azure Alert Rules for all SCOM alerts
 
 1. In the portal, select **Monitor** and under the Monitor section - choose **Alerts**.
 
 ![Monitor Alert](./media/monitor_alerts.jpg)
 
-2. You will see auto created alert rule.
+2. You see auto created alert rule. This alert rule generates a new alert.
 
-![Alert Rule](./media/alert_rule.jpg)
+![Two alerts](./media/two_alerts.jpg)
 
-3. Click on **Total alert rules** to show the Rules page.
+- One from Alert Management with Alert State - **Closed**. Our solution closes all alerts from Alert Management solution.
 
-![total alert rules](./media/rule.jpg)
+![Alert Management](./media/alert_management_alert.jpg)
 
-4. Select the rule
+- Second alert from SCOM Alert Management solution
 
-![SCOM Alert rule](./media/Rule_drillon.JPG)
+![SCOM Alert](./media/scom_alert.jpg)
 
 <!-- <Description?> -->
 
@@ -129,7 +131,7 @@ The solution is in a separate resource group and includes two logic apps.
 You can manage alerts by enabling and disabling them in the alert rule section.
 <!-- In the Rule page , you can select multiple alert rules and enable/disable them. This might be useful when certain target resources need to be put under maintenance-->
 
- - If the alert is no longer required, click on **Disable** button.
+- If the alert is no longer required, click on **Disable** button.
 
 ![Disable rule](./media/disable_rule.jpg)
 
@@ -143,9 +145,26 @@ You can view and manage log queries by clicking on the **Condition** value.
 
 ![Log query](./media/log_query.jpg)
 
-### ITSM
+### Create ITSM work items from Azure alerts
 
-SCOM Alert Management solution allows you to create ITSM tickets.  
+When creating/editing an Azure alert rule, use an Action group, which has an ITSM Action. When the alert triggers, work item is created/updated in the ITSM tool.
+
+Once you have your ITSM connection created, you can create work item(s) in your ITSM tool based on Azure alerts, by using the ITSM Action in Action Groups.
+
+Use the following procedure:
+
+1. In Azure portal, click **Monitor**.
+2. Click **Alerts**
+3. In the command bar on the top, click **Manage actions**.
+4. Click on **Add action group**.
+5. Provide **Name** and **ShortName** for your action group. Select the **Resource Group** and **Subscription** where you want to create your action group.
+
+![Add action group](./media/add_action_group.jpg)
+
+6. In the Actions list, select **ITSM** from the drop-down menu for **Action Type**. Provide a **Name** for the action and click **Edit details**.
+7. Select the **Subscription** where your Log Analytics workspace is located. Select the **Connection** name (your ITSM Connector name) followed by your Workspace name.
+8. Select **Work Item** type from the drop-down menu. Choose to use an existing template or fill the fields required by your ITSM product.
+9.  Click OK.
 
 ## Troubleshooting
 
