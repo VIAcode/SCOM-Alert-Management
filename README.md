@@ -6,9 +6,9 @@
   - [Prerequisites](#prerequisites)
     - [Case study](#case-study)
   - [Install SCOM Alert Management solution](#install-scom-alert-management-solution)
-    - [Install from the Portal](#install-from-the-portal)
-    - [Configuration](#configuration)
     - [Install from the Marketplace](#install-from-the-marketplace)
+    - [Install from the Portal](#install-from-the-portal)
+      - [Configuration](#configuration)
       - [Validate successful installation](#validate-successful-installation)
   - [Key Scenarios](#key-scenarios)
     - [Automatically create Azure Alert Rules for all SCOM alerts](#automatically-create-azure-alert-rules-for-all-scom-alerts)
@@ -67,6 +67,15 @@ As you can see, the alert raised in Azure does not have a correspondent alert ru
 
 ## Install SCOM Alert Management solution
 
+### Install from the Marketplace
+
+1. Open Azure Marketplace
+2. Select **Management Tools** and find **SCOM Alert Management** solution
+
+![Marketplace Management Tools](./media/marketplace_management_tools.jpg)
+
+3. Click **Create** to start the installation process.
+
 ### Install from the Portal
 
 1. Log in to the Azure portal.
@@ -81,7 +90,7 @@ As you can see, the alert raised in Azure does not have a correspondent alert ru
 
 5. When the installation process starts, you're prompted to provide required configuration.
 
-### Configuration
+#### Configuration
 
 1. Configure basic settings
 
@@ -109,15 +118,6 @@ As you can see, the alert raised in Azure does not have a correspondent alert ru
 ![Buy](./media/buy.jpg)
 
 - User can read Terms of Use and [Private Policy](https://www.viacode.com/viacode-privacy-statement)
-
-### Install from the Marketplace
-
-1. Open Azure Marketplace
-2. Select **Management Tools** and find **SCOM Alert Management** solution
-
-![Marketplace Management Tools](./media/marketplace_management_tools.jpg)
-
-3. Click **Create** to start the installation process.
 
 #### Validate successful installation
 
