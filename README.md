@@ -9,13 +9,14 @@
     - [Install from the Portal](#install-from-the-portal)
     - [Configuration](#configuration)
     - [Install from the Marketplace](#install-from-the-marketplace)
-  - [Verify monitoring solution deploy](#verify-monitoring-solution-deploy)
-  - [Automatically create Azure Alert Rules for all SCOM alerts](#automatically-create-azure-alert-rules-for-all-scom-alerts)
-  - [Manage alert rules](#manage-alert-rules)
-    - [Enable or Disable the generation of Azure Alerts for corresponding SCOM Alerts](#enable-or-disable-the-generation-of-azure-alerts-for-corresponding-scom-alerts)
-    - [Log query](#log-query)
-    - [Create ITSM work items from Azure alerts](#create-itsm-work-items-from-azure-alerts)
-  - [Remove SCOM Alert Management solution](#remove-scom-alert-management-solution)
+      - [Validate successful installation](#validate-successful-installation)
+  - [Key Scenarios](#key-scenarios)
+    - [Automatically create Azure Alert Rules for all SCOM alerts](#automatically-create-azure-alert-rules-for-all-scom-alerts)
+    - [Manage alert rules](#manage-alert-rules)
+      - [Enable or Disable the generation of Azure Alerts for corresponding SCOM Alerts](#enable-or-disable-the-generation-of-azure-alerts-for-corresponding-scom-alerts)
+      - [Log query](#log-query)
+      - [Create ITSM work items from Azure alerts](#create-itsm-work-items-from-azure-alerts)
+    - [Remove SCOM Alert Management solution](#remove-scom-alert-management-solution)
   - [Troubleshooting](#troubleshooting)
 
 <!-- TOC END -->
@@ -118,7 +119,7 @@ As you can see, the alert raised in Azure does not have a correspondent alert ru
 
 3. Click **Create** to start the installation process.
 
-## Verify monitoring solution deploy
+#### Validate successful installation
 
 The solution is in a separate resource group and includes two logic apps.
 
@@ -129,7 +130,9 @@ The solution is in a separate resource group and includes two logic apps.
 
 If one of your solution deployments failed during installation, check [Troubleshooting](#Troubleshooting).
 
-## Automatically create Azure Alert Rules for all SCOM alerts
+## Key Scenarios
+
+### Automatically create Azure Alert Rules for all SCOM alerts
 
 1. In the portal, select **Monitor** and under the Monitor section - choose **Alerts**.
 
@@ -147,9 +150,9 @@ If one of your solution deployments failed during installation, check [Troublesh
 
 ![SCOM Alert](./media/scom_alert.jpg)
 
-## Manage alert rules
+### Manage alert rules
 
-### Enable or Disable the generation of Azure Alerts for corresponding SCOM Alerts
+#### Enable or Disable the generation of Azure Alerts for corresponding SCOM Alerts
 
 You can manage alerts by enabling and disabling them in the alert rule section.
 <!-- In the Rule page , you can select multiple alert rules and enable/disable them. This might be useful when certain target resources need to be put under maintenance-->
@@ -158,13 +161,13 @@ You can manage alerts by enabling and disabling them in the alert rule section.
 
 ![Disable rule](./media/disable_rule.jpg)
 
-### Log query
+#### Log query
 
 You can view and manage log queries by clicking on the **Condition** value.
 
 ![Log query](./media/log_query.jpg)
 
-### Create ITSM work items from Azure alerts
+#### Create ITSM work items from Azure alerts
 
 When creating/editing an Azure alert rule, use an Action group, which has an ITSM Action. When the alert triggers, work item is created/updated in the ITSM tool.
 
@@ -187,7 +190,7 @@ Use the following procedure:
 
 * More information you can find on [docs.microsoft.com](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/itsmc-overview)
 
-## Remove SCOM Alert Management solution
+### Remove SCOM Alert Management solution
 
 1. Open resource group with Logic Apps
 2. Click on **Delete resource group**
