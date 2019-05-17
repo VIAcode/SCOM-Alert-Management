@@ -10,13 +10,13 @@
     - [Install from the Portal](#install-from-the-portal)
       - [Configuration](#configuration)
       - [Validate successful installation](#validate-successful-installation)
+    - [Remove SCOM Alert Management solution](#remove-scom-alert-management-solution)
   - [Key Scenarios](#key-scenarios)
     - [Automatically create Azure Alert Rules for all SCOM alerts](#automatically-create-azure-alert-rules-for-all-scom-alerts)
     - [Manage alert rules](#manage-alert-rules)
       - [Enable or Disable the generation of Azure Alerts for corresponding SCOM Alerts](#enable-or-disable-the-generation-of-azure-alerts-for-corresponding-scom-alerts)
       - [Log query](#log-query)
       - [Create ITSM work items from Azure alerts](#create-itsm-work-items-from-azure-alerts)
-    - [Remove SCOM Alert Management solution](#remove-scom-alert-management-solution)
   - [Troubleshooting](#troubleshooting)
 
 <!-- TOC END -->
@@ -127,6 +127,13 @@ The solution is in a separate resource group and includes two logic apps.
 
 If one of your solution deployments failed during installation, check [Troubleshooting](#Troubleshooting).
 
+### Remove SCOM Alert Management solution
+
+1. Open resource group with Logic Apps
+2. Click on **Delete resource group**
+
+![Delete resource group](./media/delete_resource_group.jpg)
+
 ## Key Scenarios
 
 ### Automatically create Azure Alert Rules for all SCOM alerts
@@ -187,12 +194,6 @@ Use the following procedure:
 
 * More information you can find on [docs.microsoft.com](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/itsmc-overview)
 
-### Remove SCOM Alert Management solution
-
-1. Open resource group with Logic Apps
-2. Click on **Delete resource group**
-
-![Delete resource group](./media/delete_resource_group.jpg)
   
 ## Troubleshooting
 
